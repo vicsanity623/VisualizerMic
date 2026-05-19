@@ -296,7 +296,7 @@ void main(){
   float spd=u_time*(.05+u_mid*.08);
 
   float f=smoke(uv*0.6,spd,warp);
-  float f2=smoke(uv*0.9+vec2(3.1,1.8),spd*1.35+.9,warp*.55);
+  float f2=smoke(uv*2.2+vec2(3.1,1.8),spd*1.35+.9,warp*.55);
   f=mix(f,f2,.20+u_high*.42);
   f=f*.5+.5;
 
