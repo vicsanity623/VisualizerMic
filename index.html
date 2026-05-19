@@ -292,11 +292,11 @@ void main(){
   vec2 uv=(gl_FragCoord.xy-.5*u_res)/min(u_res.x,u_res.y);
   /* ✓ NO uv.y offset — drift bug fixed */
 
-  float warp=1.9+u_bass*2.8+u_mid*.7;
-  float spd=u_time*(.05+u_mid*.08);
+  float warp=1.8+u_bass*2.4+u_mid*0.2;
+  float spd=u_time*(.05+u_mid*.02);
 
-  float f=smoke(uv*1.65,spd,warp);
-  float f2=smoke(uv*2.2+vec2(3.1,1.8),spd*1.35+.9,warp*.55);
+  float f=smoke(uv*0.9,spd,warp);
+  float f2=smoke(uv*2.5+vec2(3.1,1.8),spd*1.35+.9,warp*.55);
   f=mix(f,f2,.20+u_high*.42);
   f=f*.5+.5;
 
